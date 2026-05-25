@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#1a1410" />
+
+<title>Our Team & Stylists | Urban Halo Salon — Arlington, VA</title>
+<meta name="description" content="Meet the master stylists, creative directors, and aestheticians at Urban Halo Salon in Clarendon, Arlington VA. Specialists in balayage, color, and keratin smoothing." />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://urbanhalosalonarlington.com/team/" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Urban Halo Salon" />
+<meta property="og:title" content="Our Team — Urban Halo Salon" />
+<meta property="og:description" content="Meet the master stylists at Urban Halo Salon in Clarendon, Arlington VA." />
+<meta property="og:url" content="https://urbanhalosalonarlington.com/team/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  *,*::before,*::after{ box-sizing: border-box; margin: 0; padding: 0; }
+  :root{
+    --cream:#f5efe6;--cream-soft:#faf6ef;--paper:#ede5d6;
+    --ink:#1a1410;--ink-soft:#3a2e25;--muted:#6b5a4b;
+    --line:#d9cdb8;--halo:#b8693a;--halo-deep:#8a4a23;--halo-glow:#e8b894;
+    --serif:"Cormorant Garamond","Times New Roman",serif;
+    --sans:"Manrope",-apple-system,sans-serif;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.55; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: none; }
+  ::selection{ background: var(--halo); color: var(--cream); }
+
+  .topbar{ background: var(--ink); color: var(--cream); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding: 10px 24px; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .topbar a:hover{ color: var(--halo-glow); }
+  .topbar .sep{ opacity: .35; }
+
+  header.site{ position: sticky; top: 0; background: rgba(245,239,230,.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(217,205,184,.6); z-index: 40; }
+  .nav{ max-width: 1440px; margin: 0 auto; padding: 18px 32px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
+  .nav-left,.nav-right{ display: flex; gap: 28px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; }
+  .nav-right{ justify-content: flex-end; }
+  .nav a{ position: relative; padding: 4px 0; transition: color .25s var(--ease); }
+  .nav a::after{ content:""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--halo); transition: width .35s var(--ease); }
+  .nav a:hover{ color: var(--halo-deep); }
+  .nav a:hover::after, .nav a.active::after{ width: 100%; }
+  .nav a.active{ color: var(--halo-deep); }
+  .logo{ font-family: var(--serif); font-style: italic; font-size: 30px; text-align: center; line-height: 1; }
+  .logo .dot{ color: var(--halo); }
+  .logo small{ display: block; font-family: var(--sans); font-style: normal; font-size: 9px; letter-spacing: .35em; margin-top: 4px; color: var(--muted); text-transform: uppercase; }
+  .menu-btn{ display: none; background: none; border: 0; cursor: pointer; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-family: inherit; }
+
+  /* Hero */
+  .page-hero{
+    max-width: 1440px; margin: 0 auto;
+    padding: 80px 32px;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .breadcrumb{ font-size: 11px; letter-spacing: .25em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  .breadcrumb span{ color: var(--halo-deep); }
+  .page-hero h1{
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(64px, 9vw, 140px); line-height: .95; letter-spacing: -.015em;
+    margin-bottom: 28px;
+  }
+  .page-hero h1 em{ font-style: italic; color: var(--halo-deep); font-weight: 300; }
+  .page-hero .intro{ max-width: 600px; margin: 0 auto; font-size: 17px; line-height: 1.75; color: var(--ink-soft); }
+  .page-hero .intro em{ font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--halo-deep); display: block; margin-bottom: 12px; }
+
+  /* Owners feature */
+  .owners{
+    background: var(--cream-soft);
+    padding: 100px 32px;
+  }
+  .owners-wrap{
+    max-width: 1440px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .owner-card{
+    background: var(--cream);
+    padding: 0;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+    transition: all .5s var(--ease);
+  }
+  .owner-card:hover{ transform: translateY(-6px); box-shadow: 0 30px 60px -20px rgba(26,20,16,.2); }
+  .owner-img{
+    aspect-ratio: 4/3;
+    background-color: var(--ink);
+    background-size: cover;
+    background-position: center top;
+    filter: grayscale(.2);
+    transition: filter .6s var(--ease);
+  }
+  .owner-card:hover .owner-img{ filter: grayscale(0); }
+  .owner-content{ padding: 40px; }
+  .owner-content .role{
+    font-size: 11px; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--halo-deep); font-weight: 600; margin-bottom: 12px;
+  }
+  .owner-content h2{
+    font-family: var(--serif); font-weight: 400; font-size: 44px; line-height: 1; margin-bottom: 16px;
+  }
+  .owner-content h2 em{ font-style: italic; color: var(--halo-deep); }
+  .owner-content p{
+    font-size: 15px; line-height: 1.75; color: var(--ink-soft);
+  }
+
+  /* Team grid */
+  .team-section{ padding: 120px 32px; max-width: 1440px; margin: 0 auto; }
+  .section-head{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: end; margin-bottom: 72px;
+  }
+  .section-head h2{
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -.01em;
+  }
+  .section-head h2 em{ font-style: italic; color: var(--halo-deep); }
+  .section-head .meta{ color: var(--muted); font-size: 15px; max-width: 420px; }
+  .section-num{ font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--halo-deep); margin-bottom: 12px; display: block; }
+
+  .team-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+  }
+  .stylist{
+    position: relative;
+    overflow: hidden;
+  }
+  .stylist-img{
+    aspect-ratio: 3/4;
+    background-color: var(--paper);
+    background-size: cover;
+    background-position: center top;
+    margin-bottom: 16px;
+    filter: grayscale(.4) contrast(1.02);
+    transition: all .6s var(--ease);
+    position: relative;
+  }
+  .stylist:hover .stylist-img{ filter: grayscale(0) contrast(1); }
+  .stylist-img::after{
+    content:""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(26,20,16,.4));
+    opacity: 0;
+    transition: opacity .4s var(--ease);
+  }
+  .stylist:hover .stylist-img::after{ opacity: 1; }
+  .stylist h4{
+    font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .stylist h4 em{ font-style: italic; color: var(--halo-deep); }
+  .stylist .role{
+    font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Hours and values */
+  .values{
+    background: var(--ink); color: var(--cream);
+    padding: 120px 32px;
+    position: relative; overflow: hidden;
+  }
+  .values::before{
+    content: ""; position: absolute;
+    top: -300px; left: -300px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(184,105,58,.18), transparent 70%);
+    pointer-events: none;
+  }
+  .values-wrap{ max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; text-align: center; }
+  .values h2{
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(48px, 7vw, 96px); line-height: 1;
+    margin-bottom: 64px;
+  }
+  .values h2 em{ font-style: italic; color: var(--halo-glow); }
+  .values-grid{
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;
+    text-align: left;
+  }
+  .value-block{
+    border-top: 1px solid rgba(245,239,230,.2);
+    padding-top: 24px;
+  }
+  .value-block span{
+    font-family: var(--serif); font-style: italic; font-size: 14px;
+    color: var(--halo-glow); display: block; margin-bottom: 12px;
+  }
+  .value-block h3{
+    font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.1; margin-bottom: 16px;
+  }
+  .value-block p{
+    font-size: 15px; line-height: 1.75; color: rgba(245,239,230,.7);
+  }
+
+  /* CTA */
+  .cta-strip{
+    background: var(--cream-soft);
+    text-align: center; padding: 100px 32px;
+    border-top: 1px solid var(--line);
+  }
+  .cta-strip h2{
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px); line-height: 1; margin-bottom: 24px;
+  }
+  .cta-strip h2 em{ font-style: italic; color: var(--halo-deep); }
+  .cta-strip .phone-big{
+    font-family: var(--serif); font-size: clamp(32px, 5vw, 56px); font-style: italic;
+    color: var(--halo-deep); border-bottom: 1px solid var(--halo); padding-bottom: 6px;
+  }
+  .cta-strip .phone-big:hover{ color: var(--ink); }
+
+  /* Footer */
+  footer.site{ background: var(--ink); color: var(--cream); }
+  .foot-grid{ max-width: 1440px; margin: 0 auto; padding: 60px 32px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 56px; }
+  .foot-grid .logo{ color: var(--cream); text-align: left; font-size: 36px; margin-bottom: 20px; }
+  .foot-grid .logo small{ color: rgba(245,239,230,.5); }
+  .foot-grid p, .foot-grid li, .foot-grid a{ font-size: 14px; color: rgba(245,239,230,.7); line-height: 1.8; }
+  .foot-grid a:hover{ color: var(--halo-glow); }
+  .foot-grid h5{ font-size: 11px; letter-spacing: .25em; text-transform: uppercase; color: var(--halo-glow); font-weight: 600; margin-bottom: 16px; }
+  .foot-grid ul{ list-style: none; }
+  .foot-bottom{ max-width: 1440px; margin: 0 auto; padding: 28px 32px; border-top: 1px solid rgba(245,239,230,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: rgba(245,239,230,.4); }
+
+  .reveal{ opacity: 0; transform: translateY(20px); transition: all .8s var(--ease); }
+  .reveal.in{ opacity: 1; transform: none; }
+
+  @media (max-width: 1024px){
+    .page-hero{ padding: 60px 24px; }
+    .owners-wrap{ grid-template-columns: 1fr; gap: 40px; padding: 0; }
+    .owners{ padding: 70px 24px; }
+    .team-section{ padding: 80px 24px; }
+    .section-head{ grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+    .team-grid{ grid-template-columns: repeat(3, 1fr); }
+    .values{ padding: 80px 24px; }
+    .values-grid{ grid-template-columns: 1fr; gap: 32px; }
+    .foot-grid{ grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+  @media (max-width: 700px){
+    .topbar{ font-size: 10px; gap: 14px; padding: 8px 16px; }
+    .topbar .sep{ display: none; }
+    .nav{ grid-template-columns: auto 1fr auto; padding: 14px 20px; }
+    .nav-left, .nav-right{ display: none; }
+    .menu-btn{ display: block; }
+    .nav.open .nav-left, .nav.open .nav-right{ display: flex; flex-direction: column; grid-column: 1/-1; align-items: center; padding-top: 20px; gap: 18px; }
+    .logo{ font-size: 24px; text-align: left; }
+    .team-grid{ grid-template-columns: repeat(2, 1fr); gap: 20px 16px; }
+    .foot-grid{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="tel:7035274256">📞 703-527-4256</a>
+  <span class="sep">·</span>
+  <a href="https://www.google.com/maps/place/Urban+Halo+Salon" target="_blank" rel="noopener">2900-B Clarendon Blvd, Arlington VA</a>
+  <span class="sep">·</span>
+  <a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a>
+</div>
+
+<header class="site">
+  <nav class="nav" id="nav">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="team.html" class="active">Team</a>
+    </div>
+    <a href="index.html" class="logo">Urban Halo<span class="dot">.</span><small>Arlington · Est.</small></a>
+    <div class="nav-right">
+      <a href="index.html#visit">Visit</a>
+      <a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a>
+      <a href="tel:7035274256" style="color: var(--halo-deep); font-weight: 600;">Book →</a>
+    </div>
+    <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+  </nav>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="reveal">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <span>Our Team</span></div>
+    <h1>The hands<br>behind your <em>halo</em>.</h1>
+    <p class="intro">
+      <em>Master stylists. Master educators.</em>
+      Our artists have trained extensively under world-renowned educators, advancing through multiple levels of mastery in cutting, color, and texture work. Each brings a distinct point of view &mdash; one will be perfect for you.
+    </p>
+  </div>
+</section>
+
+<!-- Owners -->
+<section class="owners">
+  <div class="owners-wrap">
+    <article class="owner-card reveal">
+      <div class="owner-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Nash-1.jpg');"></div>
+      <div class="owner-content">
+        <div class="role">Owner · Creative Director</div>
+        <h2>Nash <em>Noufal</em></h2>
+        <p>
+          With decades of advanced training and a roster of celebrity educators behind him, Nash leads Urban Halo&apos;s creative vision. Every cut he touches is precision-engineered for the way you actually live.
+        </p>
+      </div>
+    </article>
+    <article class="owner-card reveal">
+      <div class="owner-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Henry.jpg');"></div>
+      <div class="owner-content">
+        <div class="role">Owner · Master Stylist</div>
+        <h2>Henry <em>Noufal</em></h2>
+        <p>
+          Henry brings sharp technical mastery and a calm, intuitive chair-side presence. He&apos;s the artist clients return to year after year for cuts that look effortless and grow out beautifully.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Team grid -->
+<section class="team-section">
+  <div class="section-head reveal">
+    <div>
+      <span class="section-num">— The Studio</span>
+      <h2>Stylists, artists,<br>and the <em>front desk</em>.</h2>
+    </div>
+    <p class="meta">
+      Please specify your preferred stylist level &mdash; Creative Director, Master Stylist, or Junior Stylist &mdash; when you book. Pricing varies by level, length, and density.
+    </p>
+  </div>
+
+  <div class="team-grid">
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Andre-300x300.jpg');"></div>
+      <h4><em>Andre</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Ikram-300x300.jpg');"></div>
+      <h4><em>Ikram</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Kyle-300x300.jpg');"></div>
+      <h4><em>Kyle</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Stylist-300x300.jpg');"></div>
+      <h4><em>Laura</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Laura-300x300.jpg');"></div>
+      <h4><em>Brittany</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/LauraDesk-1-300x300.jpg');"></div>
+      <h4><em>Meghan</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Stylist2-300x300.jpg');"></div>
+      <h4><em>Andrea</em></h4>
+      <div class="role">Stylist</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background: var(--paper); display: flex; align-items: center; justify-content: center;"><span style="font-family: var(--serif); font-style: italic; font-size: 60px; color: var(--halo-deep);">J</span></div>
+      <h4><em>Jocelyn</em></h4>
+      <div class="role">Stylist · Photo Coming Soon</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Rita.jpg');"></div>
+      <h4><em>Rita</em></h4>
+      <div class="role">Master Aesthetician</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background-image: url('https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/Nioshia.jpg');"></div>
+      <h4><em>Nioshia</em></h4>
+      <div class="role">Front Desk</div>
+    </div>
+    <div class="stylist reveal">
+      <div class="stylist-img" style="background: var(--paper); display: flex; align-items: center; justify-content: center;"><span style="font-family: var(--serif); font-style: italic; font-size: 60px; color: var(--halo-deep);">M</span></div>
+      <h4><em>Maria</em></h4>
+      <div class="role">Front Desk · Photo Coming Soon</div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="values">
+  <div class="values-wrap">
+    <h2 class="reveal">What we <em>believe</em>.</h2>
+    <div class="values-grid">
+      <div class="value-block reveal">
+        <span>— 01 / Craft</span>
+        <h3>Technique<br>over trends.</h3>
+        <p>Every artist on the floor has trained extensively under world-renowned educators &mdash; and continues to. The trend you love today only looks right when the technique underneath is sound.</p>
+      </div>
+      <div class="value-block reveal">
+        <span>— 02 / Care</span>
+        <h3>The ritual<br>is the result.</h3>
+        <p>The shampoo lab, the reclining chairs, the warm consultation, the individually curated treatment. Service isn&apos;t the side dish &mdash; it&apos;s the reason your hair looks the way it does.</p>
+      </div>
+      <div class="value-block reveal">
+        <span>— 03 / Community</span>
+        <h3>Built in<br>Clarendon.</h3>
+        <p>We&apos;ve been part of this neighborhood for years &mdash; recognized by Arlington Magazine, Hey Hey Gorgeous, and most importantly, the clients who keep coming back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <h2 class="reveal">Book with the <em>right</em> stylist for you.</h2>
+  <a href="tel:7035274256" class="phone-big">703 · 527 · 4256</a>
+</section>
+
+<footer class="site">
+  <div class="foot-grid">
+    <div>
+      <div class="logo">Urban Halo<span class="dot">.</span><small>Arlington · Est.</small></div>
+      <p>An award-winning hair salon in the heart of Clarendon, serving Arlington, Ballston, Courthouse, Rosslyn and the greater DMV.</p>
+    </div>
+    <div>
+      <h5>Visit</h5>
+      <ul>
+        <li>2900-B Clarendon Blvd</li>
+        <li>Arlington, VA 22201</li>
+        <li><a href="tel:7035274256">703.527.4256</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html#cut">Precision Cuts</a></li>
+        <li><a href="services.html#color">HALO Color Lab</a></li>
+        <li><a href="services.html#balayage">Balayage</a></li>
+        <li><a href="services.html#keratin">Keratin Smoothing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="https://www.instagram.com/urbanhalosalon/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/urbanhalosalonarlington/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="yr"></span> Urban Halo Salon. All Rights Reserved.</span>
+    <span>Hair Salon · Arlington VA · Clarendon</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
