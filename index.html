@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Urban Halo Salon | Hair Salon in Clarendon, Arlington VA</title>
+<meta name="description" content="Award-winning hair salon in Clarendon, Arlington VA. Balayage, keratin smoothing, precision cuts, and expert color. Call 703-527-4256.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://urbanhalosalonarlington.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Urban Halo Salon — Clarendon, Arlington VA">
+<meta property="og:description" content="Award-winning balayage, keratin smoothing & expert color in Clarendon.">
+<meta property="og:image" content="https://urbanhalosalonarlington.com/wp-content/uploads/2017/08/outside.jpg">
+<meta name="geo.region" content="US-VA">
+<meta name="geo.placename" content="Arlington">
+<meta name="geo.position" content="38.8875852;-77.0933896">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Urban Halo Salon","telephone":"+1-703-527-4256","url":"https://urbanhalosalonarlington.com/","address":{"@type":"PostalAddress","streetAddress":"2900-B Clarendon Boulevard","addressLocality":"Arlington","addressRegion":"VA","postalCode":"22201","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.8875852,"longitude":-77.0933896},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"17:00"}],"priceRange":"$$$","sameAs":["https://www.instagram.com/urbanhalosalon/","https://www.facebook.com/urbanhalosalonarlington/"]}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:     #f7f2ea;
+  --cream-2:   #f0e9db;
+  --white:     #ffffff;
+  --black:     #111009;
+  --charcoal:  #2a2620;
+  --mid:       #6b6358;
+  --gold:      #b8962e;
+  --gold-lt:   #d4af50;
+  --serif:     "Playfair Display", Georgia, serif;
+  --sans:      "DM Sans", -apple-system, sans-serif;
+  --ease:      cubic-bezier(.4,0,.2,1);
+  --max:       1200px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--gold); color: var(--white); }
+
+/* ─── TOPBAR ─── */
+.topbar {
+  background: var(--black);
+  color: rgba(247,242,234,.75);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: 10px 0;
+  text-align: center;
+}
+.topbar a { color: inherit; transition: color .2s; }
+.topbar a:hover { color: var(--gold-lt); }
+.topbar .pipe { margin: 0 16px; opacity: .3; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cream-2);
+}
+.nav-inner {
+  max-width: var(--max); margin: 0 auto;
+  padding: 0 48px;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: .04em;
+  color: var(--black);
+}
+.nav-logo em { font-style: italic; color: var(--gold); }
+.nav-links { display: flex; gap: 40px; }
+.nav-links a {
+  font-size: 12px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--mid);
+  transition: color .25s var(--ease);
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width .35s var(--ease);
+}
+.nav-links a:hover { color: var(--black); }
+.nav-links a:hover::after { width: 100%; }
+.nav-book {
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--white) !important;
+  background: var(--black);
+  padding: 12px 24px;
+  transition: background .3s var(--ease) !important;
+}
+.nav-book::after { display: none !important; }
+.nav-book:hover { background: var(--gold) !important; color: var(--white) !important; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--black); transition: all .3s; }
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 99;
+  background: var(--white); flex-direction: column; align-items: center; justify-content: center;
+  gap: 40px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 32px; font-family: var(--serif); font-style: italic;
+  color: var(--black); transition: color .2s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-close {
+  position: absolute; top: 28px; right: 32px;
+  background: none; border: none; cursor: pointer;
+  font-size: 28px; color: var(--mid);
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--cream);
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.hero-text {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 100px 80px 100px 80px;
+  max-width: 640px;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(48px, 5.5vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  color: var(--black);
+  margin-bottom: 28px;
+}
+.hero h1 em { font-style: italic; }
+.hero p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--mid);
+  max-width: 440px;
+  margin-bottom: 48px;
+}
+.hero-actions { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-block;
+  background: var(--black); color: var(--white);
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500;
+  padding: 16px 32px;
+  transition: background .3s var(--ease);
+}
+.btn-primary:hover { background: var(--gold); }
+.link-phone {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--black);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+  transition: color .2s;
+}
+.link-phone:hover { color: var(--gold); }
+.hero-image {
+  position: relative;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 8s ease;
+}
+.hero:hover .hero-image img { transform: scale(1.03); }
+.hero-hours {
+  position: absolute;
+  bottom: 40px; left: 40px;
+  background: rgba(255,255,255,.92);
+  padding: 24px 28px;
+  min-width: 220px;
+}
+.hero-hours h4 {
+  font-size: 9px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.hero-hours .hr {
+  display: flex; justify-content: space-between;
+  font-size: 13px; padding: 5px 0;
+  border-bottom: 1px solid var(--cream-2);
+  color: var(--charcoal);
+}
+.hero-hours .hr:last-child { border-bottom: none; }
+.hero-hours .hr span:first-child { color: var(--mid); }
+
+/* ─── GOLD RULE ─── */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  max-width: var(--max); margin: 0 auto;
+  opacity: .6;
+}
+
+/* ─── SECTION WRAPPER ─── */
+.section { padding: 120px 48px; }
+.section-narrow { max-width: var(--max); margin: 0 auto; }
+
+/* ─── ABOUT / INTRO ─── */
+.about-section { background: var(--white); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 96px; align-items: center;
+}
+.about-img { position: relative; }
+.about-img img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--cream-2);
+}
+.about-img-badge {
+  position: absolute;
+  bottom: -24px; right: -24px;
+  background: var(--black);
+  color: var(--cream);
+  padding: 28px 24px;
+  text-align: center;
+  min-width: 140px;
+}
+.about-img-badge span {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--gold-lt);
+  display: block;
+}
+.about-img-badge small {
+  font-size: 9px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(247,242,234,.6);
+  margin-top: 6px;
+  display: block;
+}
+.about-content { padding-left: 16px; }
+.section-label {
+  font-size: 10px;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.about-content h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+.about-content h2 em { font-style: italic; }
+.about-content p {
+  font-size: 16px; line-height: 1.8;
+  color: var(--mid);
+  margin-bottom: 20px;
+  max-width: 480px;
+}
+.about-content p.lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  color: var(--charcoal);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+.stats-row {
+  display: flex; gap: 40px;
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid var(--cream-2);
+}
+.stat span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 42px;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat small {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 6px;
+  display: block;
+}
+
+/* ─── TICKER ─── */
+.ticker {
+  background: var(--black);
+  padding: 20px 0;
+  overflow: hidden;
+}
+.ticker-track {
+  display: flex;
+  gap: 48px;
+  white-space: nowrap;
+  animation: tick 28s linear infinite;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: rgba(247,242,234,.5);
+}
+.ticker-track .hi { color: var(--gold-lt); opacity: .9; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* ─── SERVICES ─── */
+.services-section { background: var(--cream); }
+.services-head {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: end;
+  margin-bottom: 72px;
+}
+.services-head h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.1;
+}
+.services-head h2 em { font-style: italic; }
+.services-head p { font-size: 15px; color: var(--mid); line-height: 1.8; max-width: 400px; }
+.services-list { border-top: 1px solid rgba(0,0,0,.1); }
+.service-row {
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: start;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  gap: 48px;
+  cursor: default;
+  transition: padding .4s var(--ease);
+}
+.service-row:hover { padding-left: 20px; }
+.service-row .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+.service-row h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.service-row h3 em { font-style: italic; }
+.service-row p { font-size: 14px; color: var(--mid); line-height: 1.7; max-width: 540px; }
+.service-price {
+  text-align: right;
+  min-width: 140px;
+}
+.service-price span {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--charcoal);
+  display: block;
+}
+.service-price small {
+  font-size: 10px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--mid);
+  margin-top: 4px; display: block;
+}
+.services-cta { margin-top: 56px; }
+
+/* ─── BALAYAGE FEATURE ─── */
+.balayage-section {
+  background: var(--black);
+  color: var(--cream);
+  position: relative; overflow: hidden;
+}
+.balayage-section::before {
+  content: ''; position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(184,150,46,.2), transparent 65%);
+  pointer-events: none;
+}
+.balayage-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 96px; align-items: center;
+  position: relative; z-index: 1;
+}
+.balayage-content .section-label { color: var(--gold-lt); }
+.balayage-content h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+.balayage-content h2 em { font-style: italic; color: var(--gold-lt); }
+.balayage-content .lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--gold-lt);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.balayage-content p { font-size: 16px; color: rgba(247,242,234,.7); line-height: 1.8; margin-bottom: 20px; max-width: 500px; }
+.baly-prices {
+  margin: 40px 0;
+  border-top: 1px solid rgba(247,242,234,.12);
+}
+.baly-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(247,242,234,.08);
+}
+.baly-row span:first-child { font-size: 14px; color: rgba(247,242,234,.8); }
+.baly-row span:last-child { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--gold-lt); }
+.btn-gold {
+  display: inline-block;
+  background: var(--gold); color: var(--white);
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500;
+  padding: 16px 32px;
+  transition: background .3s var(--ease);
+}
+.btn-gold:hover { background: var(--gold-lt); }
+.balayage-image {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  position: relative;
+}
+.balayage-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+}
+
+/* ─── VISIT ─── */
+.visit-section { background: var(--cream); }
+.visit-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 96px; align-items: center;
+}
+.visit-content h2 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(36px, 4vw, 56px); line-height: 1.1;
+  margin-bottom: 28px;
+}
+.visit-content h2 em { font-style: italic; }
+.visit-content > p { font-size: 16px; color: var(--mid); line-height: 1.8; margin-bottom: 40px; max-width: 480px; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.info-block h5 {
+  font-size: 10px; letter-spacing: .35em; text-transform: uppercase;
+  color: var(--gold); font-weight: 500; margin-bottom: 12px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--cream-2);
+}
+.info-block p, .info-block a { font-size: 15px; color: var(--charcoal); line-height: 1.7; }
+.info-block a:hover { color: var(--gold); }
+.hour-line { display: flex; justify-content: space-between; font-size: 14px; padding: 5px 0; }
+.hour-line span:first-child { color: var(--mid); }
+.policy-note {
+  margin-top: 32px;
+  padding: 20px 24px;
+  border-left: 2px solid var(--gold);
+  background: rgba(184,150,46,.05);
+  font-size: 13px; color: var(--mid); line-height: 1.7;
+  font-style: italic;
+}
+.visit-img {
+  aspect-ratio: 4/5;
+  overflow: hidden; position: relative;
+}
+.visit-img img { width: 100%; height: 100%; object-fit: cover; }
+.visit-img .tag {
+  position: absolute; bottom: 32px; left: 32px;
+  background: var(--white); padding: 16px 20px;
+}
+.visit-img .tag small { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.visit-img .tag p { font-family: var(--serif); font-style: italic; font-size: 20px; margin-top: 4px; }
+.btn-outline {
+  display: inline-block;
+  border: 1px solid var(--black); color: var(--black);
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500;
+  padding: 14px 28px; margin-top: 28px;
+  transition: all .3s var(--ease);
+}
+.btn-outline:hover { background: var(--black); color: var(--white); }
+
+/* ─── AWARDS ─── */
+.awards-section { background: var(--white); padding: 72px 48px; }
+.awards-inner { max-width: var(--max); margin: 0 auto; }
+.awards-label { text-align: center; font-size: 10px; letter-spacing: .4em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 40px; }
+.awards-row { display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap; }
+.award-item {
+  padding: 12px 36px;
+  border-left: 1px solid var(--cream-2);
+  text-align: center;
+}
+.award-item:first-child { border-left: none; }
+.award-item strong { display: block; font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--charcoal); }
+.award-item small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--mid); margin-top: 4px; display: block; }
+
+/* ─── KERASTASE ─── */
+.kera-section { background: var(--cream); padding: 80px 48px; border-top: 1px solid var(--cream-2); border-bottom: 1px solid var(--cream-2); }
+.kera-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.kera-text h3 { font-family: var(--serif); font-style: italic; font-size: 28px; margin-bottom: 8px; }
+.kera-text p { font-size: 14px; color: var(--mid); }
+.kera-badge { font-size: 11px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); font-weight: 500; background: rgba(184,150,46,.08); padding: 10px 20px; border: 1px solid rgba(184,150,46,.25); }
+
+/* ─── BIG CTA ─── */
+.cta-section {
+  background: var(--black); color: var(--cream);
+  text-align: center;
+  padding: 140px 48px;
+}
+.cta-section h2 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(48px, 7vw, 104px);
+  line-height: .98; letter-spacing: -.01em;
+  margin-bottom: 48px;
+}
+.cta-section h2 em { font-style: italic; color: var(--gold-lt); }
+.cta-phone {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(32px, 5vw, 56px);
+  color: var(--gold-lt);
+  display: inline-block;
+  border-bottom: 1px solid rgba(184,150,46,.4);
+  padding-bottom: 6px;
+  transition: color .25s;
+}
+.cta-phone:hover { color: var(--cream); border-color: var(--cream); }
+.cta-note { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(247,242,234,.4); margin-top: 24px; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--charcoal); color: var(--cream);
+}
+.footer-grid {
+  max-width: var(--max); margin: 0 auto;
+  padding: 80px 48px 60px;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 56px;
+  border-bottom: 1px solid rgba(247,242,234,.08);
+}
+.footer-brand .logo { font-family: var(--serif); font-size: 28px; margin-bottom: 16px; }
+.footer-brand .logo em { font-style: italic; color: var(--gold-lt); }
+.footer-brand p { font-size: 14px; color: rgba(247,242,234,.55); line-height: 1.8; }
+.footer-col h5 { font-size: 10px; letter-spacing: .35em; text-transform: uppercase; color: var(--gold-lt); font-weight: 500; margin-bottom: 18px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { font-size: 14px; color: rgba(247,242,234,.65); transition: color .2s; }
+.footer-col a:hover { color: var(--gold-lt); }
+.footer-col p { font-size: 14px; color: rgba(247,242,234,.65); line-height: 1.8; }
+.footer-bottom {
+  max-width: var(--max); margin: 0 auto;
+  padding: 24px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(247,242,234,.3);
+}
+.footer-bottom a:hover { color: var(--gold-lt); }
+
+/* ─── REVEALS ─── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+.reveal-d1 { transition-delay: .1s; }
+.reveal-d2 { transition-delay: .2s; }
+.reveal-d3 { transition-delay: .3s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-text { padding: 80px 40px; max-width: none; }
+  .hero-image { height: 480px; }
+  .about-grid, .balayage-grid, .visit-grid { grid-template-columns: 1fr; gap: 56px; }
+  .about-img-badge { right: 0; }
+  .services-head { grid-template-columns: 1fr; gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .section { padding: 80px 32px; }
+}
+@media (max-width: 700px) {
+  .topbar { font-size: 10px; }
+  .topbar .pipe { margin: 0 8px; }
+  .nav-inner { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-text { padding: 64px 24px; }
+  .hero h1 { font-size: 44px; }
+  .hero-hours { left: 16px; bottom: 16px; }
+  .section { padding: 64px 24px; }
+  .about-content { padding-left: 0; }
+  .info-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 24px; flex-wrap: wrap; }
+  .service-row { grid-template-columns: 1fr; gap: 16px; }
+  .service-price { text-align: left; }
+  .awards-row { gap: 8px; }
+  .award-item { padding: 10px 20px; }
+  .kera-inner { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px 40px; }
+  .footer-bottom { padding: 20px 24px; }
+  .cta-section { padding: 100px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <a href="tel:7035274256">703 · 527 · 4256</a>
+  <span class="pipe">|</span>
+  <a href="https://www.google.com/maps/place/Urban+Halo+Salon" target="_blank" rel="noopener">2900-B Clarendon Blvd, Arlington VA</a>
+  <span class="pipe">|</span>
+  <a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Urban <em>Halo</em></a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="#visit">Visit</a>
+      <a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a>
+      <a href="tel:7035274256" class="nav-book">Book Now</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('mobileMenu').classList.add('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close">&times;</button>
+  <a href="services.html">Services</a>
+  <a href="team.html">Team</a>
+  <a href="#visit">Visit</a>
+  <a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a>
+  <a href="tel:7035274256">703 · 527 · 4256</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow reveal">Clarendon · Arlington, Virginia</p>
+    <h1 class="reveal reveal-d1">
+      Anyone can<br>change for<br>the <em>better.</em>
+    </h1>
+    <p class="reveal reveal-d2">
+      Between elite personalized training and seminars with world-renowned educators,
+      our stylists are masters of the latest techniques. Let us help you reach your potential.
+    </p>
+    <div class="hero-actions reveal reveal-d3">
+      <a href="tel:7035274256" class="btn-primary">Book an Appointment</a>
+      <a href="tel:7035274256" class="link-phone">703.527.4256</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img
+      src="https://urbanhalosalonarlington.com/wp-content/uploads/2018/07/hero-image.jpg"
+      alt="Urban Halo Salon — expert hair styling in Arlington, VA"
+      loading="eager"
+    >
+    <div class="hero-hours">
+      <h4>Hours</h4>
+      <div class="hr"><span>Monday</span><span>Closed</span></div>
+      <div class="hr"><span>Tue — Fri</span><span>10am – 8pm</span></div>
+      <div class="hr"><span>Saturday</span><span>9am – 6pm</span></div>
+      <div class="hr"><span>Sunday</span><span>12pm – 5pm</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Balayage &nbsp;<span class="hi">·</span>&nbsp; Keratin Smoothing &nbsp;<span class="hi">·</span>&nbsp; Precision Cuts &nbsp;<span class="hi">·</span>&nbsp; Expert Color &nbsp;<span class="hi">·</span>&nbsp; Kerastase Treatments &nbsp;<span class="hi">·</span>&nbsp; Formal Styling &nbsp;<span class="hi">·</span>&nbsp; Best of Arlington &nbsp;<span class="hi">·</span>&nbsp;</span>
+    <span>Balayage &nbsp;<span class="hi">·</span>&nbsp; Keratin Smoothing &nbsp;<span class="hi">·</span>&nbsp; Precision Cuts &nbsp;<span class="hi">·</span>&nbsp; Expert Color &nbsp;<span class="hi">·</span>&nbsp; Kerastase Treatments &nbsp;<span class="hi">·</span>&nbsp; Formal Styling &nbsp;<span class="hi">·</span>&nbsp; Best of Arlington &nbsp;<span class="hi">·</span>&nbsp;</span>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about-section">
+  <div class="section section-narrow">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <img
+          src="https://urbanhalosalonarlington.com/wp-content/uploads/2018/10/UrbanHaloGroup1.png"
+          alt="Urban Halo Salon stylists team in Arlington, VA"
+          loading="lazy"
+        >
+        <div class="about-img-badge">
+          <span>5×</span>
+          <small>Best Salon<br>Arlington</small>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-label reveal">— About Urban Halo</p>
+        <h2 class="reveal">High-end experience.<br><em>Exceptional</em> results.</h2>
+        <p class="lead reveal">What makes us different from other Arlington hair salons? Knowledge and artistry.</p>
+        <p class="reveal">Our stylists have trained under world-renowned educators, mastering the latest fashion-forward techniques. Between advanced elite training and educational seminars, we stay at the leading edge of what's possible.</p>
+        <p class="reveal">Balayage highlights, keratin smoothing, and precision cuts are only a few of the top-notch personalized services Urban Halo provides. Every guest leaves feeling complete and glamorous.</p>
+        <div class="stats-row reveal">
+          <div class="stat"><span>15+</span><small>Years in Clarendon</small></div>
+          <div class="stat"><span>5×</span><small>Award Winner</small></div>
+          <div class="stat"><span>1</span><small>Phone Call Away</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule reveal"></div>
+
+<!-- Services -->
+<section class="services-section">
+  <div class="section section-narrow">
+    <div class="services-head">
+      <div>
+        <p class="section-label">— Services</p>
+        <h2>Everything<br>your hair <em>needs.</em></h2>
+      </div>
+      <p>From a quick blow-out to a full balayage transformation — our menu is built around your goals. Pricing varies by stylist level, hair length, and density.</p>
+    </div>
+
+    <div class="services-list">
+      <div class="service-row reveal">
+        <div>
+          <span class="num">01</span>
+          <h3>Precision <em>Cuts</em> &amp; Style</h3>
+          <p>Premium shampoo, warm consultation, expert cut, signature blow-dry. Available with our Creative Directors Nash &amp; Elvira Noufal, Master Stylists, or Junior Stylists.</p>
+        </div>
+        <div class="service-price">
+          <span>$60 – $130+</span>
+          <small>by stylist level</small>
+        </div>
+      </div>
+
+      <div class="service-row reveal">
+        <div>
+          <span class="num">02</span>
+          <h3>HALO <em>Color</em> Lab</h3>
+          <p>One process, twin process, INOA ammonia-free, gloss, multi-color toning, corrective, and creative color. The full spectrum.</p>
+        </div>
+        <div class="service-price">
+          <span>$100 – $250+</span>
+          <small>starting from</small>
+        </div>
+      </div>
+
+      <div class="service-row reveal">
+        <div>
+          <span class="num">03</span>
+          <h3>Balayage &amp; <em>Blonding</em></h3>
+          <p>Partial and full balayage highlights, foliage, and traditional foil work. Hand-painted, lived-in, sun-kissed — tailored to your face and lifestyle.</p>
+        </div>
+        <div class="service-price">
+          <span>$180 – $350+</span>
+          <small>partial / full</small>
+        </div>
+      </div>
+
+      <div class="service-row reveal">
+        <div>
+          <span class="num">04</span>
+          <h3>Brazilian <em>Keratin</em> Smoothing</h3>
+          <p>Our signature HALO smoothing treatments — Express Plus, Brazilian Breeze, and the full Brazilian Keratin. Frizz-free results that last.</p>
+        </div>
+        <div class="service-price">
+          <span>$250 – $500+</span>
+          <small>by treatment</small>
+        </div>
+      </div>
+
+      <div class="service-row reveal">
+        <div>
+          <span class="num">05</span>
+          <h3>Special <em>Services</em></h3>
+          <p>Formal &amp; bridal styling, eyebrow tinting, eyelash tinting, eyelash extensions, and wedding day packages.</p>
+        </div>
+        <div class="service-price">
+          <span>$25 – $120+</span>
+          <small>by service</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-cta reveal">
+      <a href="services.html" class="btn-outline">View Full Menu &amp; Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- Balayage feature -->
+<section class="balayage-section">
+  <div class="section section-narrow">
+    <div class="balayage-grid">
+      <div class="balayage-content">
+        <p class="section-label reveal">— Our Specialty</p>
+        <h2 class="reveal">The art of<br><em>balayage.</em></h2>
+        <p class="lead reveal">&ldquo;Balayage&rdquo; — French for &ldquo;to sweep.&rdquo;</p>
+        <p class="reveal">Many clients come in looking to change their look without the harsh commitment of a one-process color or traditional highlight. Balayage is one of the most versatile highlighting techniques — and it's a look we happen to specialize in creating.</p>
+        <p class="reveal">This method opens doors to specialty colors with a natural, dimensional finish that grows out beautifully.</p>
+        <div class="baly-prices reveal">
+          <div class="baly-row">
+            <span>Partial Balayage Highlights</span>
+            <span>$180 – $230+</span>
+          </div>
+          <div class="baly-row">
+            <span>Full Balayage Highlights</span>
+            <span>$250 – $350+</span>
+          </div>
+        </div>
+        <a href="tel:7035274256" class="btn-gold reveal">Book Your Balayage</a>
+      </div>
+      <div class="balayage-image reveal">
+        <img
+          src="https://urbanhalosalonarlington.com/wp-content/uploads/2018/07/hero-image.jpg"
+          alt="Balayage hair coloring at Urban Halo Salon in Arlington, VA"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Awards -->
+<section class="awards-section">
+  <div class="awards-inner">
+    <p class="awards-label reveal">Recognized &amp; Awarded</p>
+    <div class="awards-row reveal">
+      <div class="award-item">
+        <strong>Best of Arlington</strong>
+        <small>Arlington Magazine</small>
+      </div>
+      <div class="award-item">
+        <strong>Best Salon 2018</strong>
+        <small>Hey Hey Gorgeous</small>
+      </div>
+      <div class="award-item">
+        <strong>Best Salon 2017</strong>
+        <small>Hey Hey Gorgeous</small>
+      </div>
+      <div class="award-item">
+        <strong>Best Salon 2016</strong>
+        <small>Hey Hey Gorgeous</small>
+      </div>
+      <div class="award-item">
+        <strong>Best Salon 2015</strong>
+        <small>Hey Hey Gorgeous</small>
+      </div>
+      <div class="award-item">
+        <strong>Best Salon 2014</strong>
+        <small>Hey Hey Gorgeous</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kerastase -->
+<section class="kera-section">
+  <div class="kera-inner reveal">
+    <div class="kera-text">
+      <h3>Featuring <em>Kérastase</em> Products</h3>
+      <p>We stock and use Kérastase — the benchmark for luxury professional hair care.</p>
+    </div>
+    <span class="kera-badge">Official Kérastase Salon</span>
+  </div>
+</section>
+
+<!-- Visit -->
+<section class="visit-section" id="visit">
+  <div class="section section-narrow">
+    <div class="visit-grid">
+      <div class="visit-content">
+        <p class="section-label reveal">— Find Us</p>
+        <h2 class="reveal">In the heart of <em>Clarendon.</em></h2>
+        <p class="reveal">Tucked along Clarendon Boulevard, steps from the Metro and minutes from Ballston, Courthouse, and Rosslyn.</p>
+
+        <div class="info-grid">
+          <div class="info-block reveal">
+            <h5>Address</h5>
+            <p><a href="https://www.google.com/maps/place/Urban+Halo+Salon" target="_blank" rel="noopener">2900-B Clarendon Boulevard<br>Arlington, Virginia 22201</a></p>
+          </div>
+          <div class="info-block reveal">
+            <h5>Phone</h5>
+            <p><a href="tel:7035274256">703.527.4256</a></p>
+          </div>
+          <div class="info-block reveal">
+            <h5>Hours</h5>
+            <div class="hour-line"><span>Monday</span><span>Closed</span></div>
+            <div class="hour-line"><span>Tue – Fri</span><span>10am – 8pm</span></div>
+            <div class="hour-line"><span>Saturday</span><span>9am – 6pm</span></div>
+            <div class="hour-line"><span>Sunday</span><span>12pm – 5pm</span></div>
+          </div>
+          <div class="info-block reveal">
+            <h5>Follow</h5>
+            <p><a href="https://www.instagram.com/urbanhalosalon/" target="_blank" rel="noopener">@urbanhalosalon</a></p>
+            <p><a href="https://www.facebook.com/urbanhalosalonarlington/" target="_blank" rel="noopener">Facebook</a></p>
+          </div>
+        </div>
+
+        <div class="policy-note reveal">
+          48-hour cancellation notice required. Missed appointments may be charged 50% of booked services. We accept Visa, MasterCard, AmEx, and Urban Halo gift certificates. An ATM is located inside the salon.
+        </div>
+      </div>
+
+      <div class="visit-img reveal">
+        <img
+          src="https://urbanhalosalonarlington.com/wp-content/uploads/2017/08/outside.jpg"
+          alt="Urban Halo Salon exterior — 2900-B Clarendon Boulevard, Arlington VA"
+          loading="lazy"
+        >
+        <div class="tag">
+          <small>Visit Us</small>
+          <p>Clarendon, Arlington</p>
+        </div>
+        <a href="https://www.google.com/maps/place/Urban+Halo+Salon" target="_blank" rel="noopener" class="btn-outline" style="position: absolute; top: 28px; right: 28px; background: white; font-size: 10px; padding: 12px 20px;">Get Directions →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Big CTA -->
+<section class="cta-section">
+  <h2 class="reveal">Ready for<br>your <em>halo?</em></h2>
+  <a href="tel:7035274256" class="cta-phone">703 · 527 · 4256</a>
+  <p class="cta-note">Call to book your appointment</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <p class="logo">Urban <em>Halo</em></p>
+      <p>Award-winning hair salon in the heart of Clarendon, serving Arlington, Ballston, Courthouse, and the greater DMV since 2009.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html#cut">Precision Cuts</a></li>
+        <li><a href="services.html#color">HALO Color Lab</a></li>
+        <li><a href="services.html#balayage">Balayage</a></li>
+        <li><a href="services.html#keratin">Keratin Smoothing</a></li>
+        <li><a href="services.html#special">Special Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Salon</h5>
+      <ul>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a href="https://www.giftrocker.com/secure/Order/?h=0968d0f3" target="_blank" rel="noopener">Gift Cards</a></li>
+        <li><a href="https://www.instagram.com/urbanhalosalon/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/urbanhalosalonarlington/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p>2900-B Clarendon Blvd<br>Arlington, VA 22201</p>
+      <p style="margin-top: 12px;"><a href="tel:7035274256">703.527.4256</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="yr"></span> Urban Halo Salon. All Rights Reserved.</span>
+    <span>Hair Salon · Arlington VA · Clarendon · Ballston · Courthouse</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
