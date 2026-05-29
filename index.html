@@ -136,15 +136,15 @@ nav {
 /* ─── HERO ─── */
 .hero {
   background: var(--cream);
-  min-height: calc(100vh - 72px);
+  min-height: 560px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .hero-text {
   display: flex; flex-direction: column;
   justify-content: center;
-  padding: 100px 80px 100px 80px;
-  max-width: 640px;
+  padding: 64px 64px 64px 80px;
+  max-width: 600px;
 }
 .hero-eyebrow {
   font-size: 11px;
@@ -152,24 +152,24 @@ nav {
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 500;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .hero h1 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(48px, 5.5vw, 80px);
-  line-height: 1.05;
+  font-size: clamp(40px, 4.2vw, 60px);
+  line-height: 1.08;
   letter-spacing: -.01em;
   color: var(--black);
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .hero h1 em { font-style: italic; }
 .hero p {
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--mid);
-  max-width: 440px;
-  margin-bottom: 48px;
+  max-width: 420px;
+  margin-bottom: 36px;
 }
 .hero-actions { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
 .btn-primary {
@@ -610,8 +610,8 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-text { padding: 80px 40px; max-width: none; }
-  .hero-image { height: 480px; }
+  .hero-text { padding: 56px 40px; max-width: none; }
+  .hero-image { height: 380px; }
   .about-grid, .balayage-grid, .visit-grid { grid-template-columns: 1fr; gap: 56px; }
   .about-img-badge { right: 0; }
   .services-head { grid-template-columns: 1fr; gap: 24px; }
@@ -624,8 +624,8 @@ footer {
   .nav-inner { padding: 0 24px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero-text { padding: 64px 24px; }
-  .hero h1 { font-size: 44px; }
+  .hero-text { padding: 48px 24px; }
+  .hero h1 { font-size: 38px; }
   .hero-hours { left: 16px; bottom: 16px; }
   .section { padding: 64px 24px; }
   .about-content { padding-left: 0; }
