@@ -543,15 +543,14 @@ nav {
 .awards-section { background: var(--white); padding: 72px 48px; }
 .awards-inner { max-width: var(--max); margin: 0 auto; }
 .awards-label { text-align: center; font-size: 10px; letter-spacing: .4em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 40px; }
-.awards-row { display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap; }
-.award-item {
-  padding: 12px 36px;
-  border-left: 1px solid var(--cream-2);
-  text-align: center;
+.awards-row { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+.award-badge {
+  height: 110px;
+  width: auto;
+  display: block;
+  transition: transform .3s var(--ease), opacity .3s var(--ease);
 }
-.award-item:first-child { border-left: none; }
-.award-item strong { display: block; font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--charcoal); }
-.award-item small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--mid); margin-top: 4px; display: block; }
+.award-badge:hover { transform: translateY(-4px); }
 
 /* ─── KERASTASE ─── */
 .kera-section { background: var(--cream); padding: 80px 48px; border-top: 1px solid var(--cream-2); border-bottom: 1px solid var(--cream-2); }
@@ -648,8 +647,8 @@ footer {
   .stats-row { gap: 24px; flex-wrap: wrap; }
   .service-row { grid-template-columns: 1fr; gap: 16px; }
   .service-price { text-align: left; }
-  .awards-row { gap: 8px; }
-  .award-item { padding: 10px 20px; }
+  .awards-row { gap: 24px; }
+  .award-badge { height: 80px; }
   .kera-inner { flex-direction: column; align-items: flex-start; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px 40px; }
   .footer-bottom { padding: 20px 24px; }
@@ -885,30 +884,11 @@ footer {
   <div class="awards-inner">
     <p class="awards-label reveal">Recognized &amp; Awarded</p>
     <div class="awards-row reveal">
-      <div class="award-item">
-        <strong>Best of Arlington</strong>
-        <small>Arlington Magazine</small>
-      </div>
-      <div class="award-item">
-        <strong>Best Salon 2018</strong>
-        <small>Hey Hey Gorgeous</small>
-      </div>
-      <div class="award-item">
-        <strong>Best Salon 2017</strong>
-        <small>Hey Hey Gorgeous</small>
-      </div>
-      <div class="award-item">
-        <strong>Best Salon 2016</strong>
-        <small>Hey Hey Gorgeous</small>
-      </div>
-      <div class="award-item">
-        <strong>Best Salon 2015</strong>
-        <small>Hey Hey Gorgeous</small>
-      </div>
-      <div class="award-item">
-        <strong>Best Salon 2014</strong>
-        <small>Hey Hey Gorgeous</small>
-      </div>
+      <img class="award-badge" src="assets/best-salon-2014.png" alt="Best Salons in the World 2014 - Hey Hey Gorgeous" loading="lazy">
+      <img class="award-badge" src="assets/best-salon-2015.png" alt="Best Salons in the World 2015 - Hey Hey Gorgeous" loading="lazy">
+      <img class="award-badge" src="assets/best-salon-2016.png" alt="Best Salons in the World 2016 - Hey Hey Gorgeous" loading="lazy">
+      <img class="award-badge" src="assets/best-salon-2017.png" alt="Best Salons in the World 2017 - Hey Hey Gorgeous" loading="lazy">
+      <img class="award-badge" src="assets/best-salon-2018.png" alt="Best Salons in the World 2018 - Hey Hey Gorgeous" loading="lazy">
     </div>
   </div>
 </section>
