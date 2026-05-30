@@ -15,6 +15,7 @@
 :root{
   --cream:#f7f2ea;--cream-2:#f0e9db;--white:#ffffff;--black:#111009;
   --charcoal:#2a2620;--mid:#6b6358;--gold:#b8962e;--gold-lt:#d4af50;
+  --brand-blue:#124B96;
   --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",-apple-system,sans-serif;
   --ease:cubic-bezier(.4,0,.2,1);--max:1200px;
 }
@@ -31,15 +32,16 @@ a{color:inherit;text-decoration:none}
 
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--cream-2)}
 .nav-inner{max-width:var(--max);margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--black)}
+.nav-logo{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--black);display:flex;align-items:center}
 .nav-logo em{font-style:italic;color:var(--gold)}
+.nav-logo img{height:38px;width:auto;display:block}
 .nav-links{display:flex;gap:40px;align-items:center}
 .nav-links a{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--mid);transition:color .25s var(--ease);position:relative;padding-bottom:2px}
-.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}
-.nav-links a:hover{color:var(--black)}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--brand-blue);transition:width .35s var(--ease)}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--brand-blue)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after,.nav-links a.active::after{width:100%}
 .nav-links a.active{color:var(--black)}
-.nav-book{font-size:11px!important;letter-spacing:.2em!important;text-transform:uppercase;font-weight:500;color:var(--white)!important;background:var(--black);padding:12px 24px;transition:background .3s var(--ease)!important}
+.nav-book{display:inline-flex;align-items:center;justify-content:center;line-height:1;font-size:11px!important;letter-spacing:.2em!important;text-transform:uppercase;font-weight:500;color:var(--white)!important;background:var(--black);padding:12px 24px;transition:background .3s var(--ease)!important}
 .nav-book::after{display:none!important}
 .nav-book:hover{background:var(--gold)!important;color:var(--white)!important}
 .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
@@ -54,7 +56,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .page-hero{background:var(--cream);padding:80px 48px 72px}
 .page-hero-inner{max-width:var(--max);margin:0 auto}
 .breadcrumb{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:28px}
-.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb a:hover,.breadcrumb a:focus-visible{color:var(--brand-blue)}
 .breadcrumb span{color:var(--gold)}
 .page-hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,8vw,110px);line-height:.98;letter-spacing:-.01em;margin-bottom:28px}
 .page-hero h1 em{font-style:italic}
@@ -64,7 +66,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .sub-nav{background:var(--white);border-bottom:1px solid var(--cream-2);position:sticky;top:72px;z-index:90}
 .sub-nav-inner{max-width:var(--max);margin:0 auto;padding:0 48px;display:flex;gap:0;overflow-x:auto}
 .sub-nav a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--mid);padding:18px 28px 16px;border-bottom:2px solid transparent;white-space:nowrap;transition:all .25s var(--ease)}
-.sub-nav a:hover{color:var(--black);border-bottom-color:var(--gold)}
+.sub-nav a:hover,.sub-nav a:focus-visible{color:var(--brand-blue);border-bottom-color:var(--brand-blue)}
 
 /* Service sections */
 .svc{border-bottom:1px solid var(--cream-2)}
@@ -73,6 +75,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .svc-inner{max-width:var(--max);margin:0 auto;padding:80px 48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
 .svc-side{position:sticky;top:160px}
 .svc-label{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px}
+.svc-label::before{content:"— ";color:var(--brand-blue)}
 .svc.dark .svc-label{color:var(--gold-lt)}
 .svc h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4vw,52px);line-height:1.05;margin-bottom:20px}
 .svc h2 em{font-style:italic}
@@ -164,7 +167,7 @@ footer{background:var(--charcoal);color:var(--white)}
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Urban <em>Halo</em></a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Urban Halo Salon"></a>
     <div class="nav-links">
       <a href="services.html" class="active">Services</a>
       <a href="team.html">Team</a>
@@ -210,7 +213,7 @@ footer{background:var(--charcoal);color:var(--white)}
 <div class="svc" id="cut">
   <div class="svc-inner">
     <div class="svc-side reveal">
-      <p class="svc-label">— 01 / Cuts &amp; Style</p>
+      <p class="svc-label">01 / Cuts &amp; Style</p>
       <h2>Precision<br><em>cuts.</em></h2>
       <p class="svc-desc">Premium shampoo, warm consultation, expert cut, and signature blow-dry. Please specify your preferred stylist level when booking.</p>
     </div>
@@ -250,7 +253,7 @@ footer{background:var(--charcoal);color:var(--white)}
 <div class="svc alt" id="color">
   <div class="svc-inner">
     <div class="svc-side reveal">
-      <p class="svc-label">— 02 / Color</p>
+      <p class="svc-label">02 / Color</p>
       <h2>HALO <em>Color</em><br>Lab.</h2>
       <p class="svc-desc">From single-process refreshes to dimensional toning, INOA ammonia-free, and full corrective work. Pricing varies with stylist level, length, and density.</p>
     </div>
@@ -297,7 +300,7 @@ footer{background:var(--charcoal);color:var(--white)}
 <div class="svc" id="balayage">
   <div class="svc-inner">
     <div class="svc-side reveal">
-      <p class="svc-label">— 03 / Balayage</p>
+      <p class="svc-label">03 / Balayage</p>
       <h2>Balayage &amp;<br><em>blonding.</em></h2>
       <p class="svc-desc">"Balayage" — French for "to sweep." Hand-painted, lived-in highlights without the harsh commitment of traditional color. It's a look we specialize in.</p>
     </div>
@@ -328,7 +331,7 @@ footer{background:var(--charcoal);color:var(--white)}
 <div class="svc dark" id="keratin">
   <div class="svc-inner">
     <div class="svc-side reveal">
-      <p class="svc-label">— 04 / Keratin</p>
+      <p class="svc-label">04 / Keratin</p>
       <h2>Brazilian<br><em>keratin</em><br>smoothing.</h2>
       <p class="svc-desc">Frizz, gone. Shine, restored. Our signature treatments smooth and condition the hair from within, reducing styling time and revealing your hair's healthiest self.</p>
     </div>
@@ -355,7 +358,7 @@ footer{background:var(--charcoal);color:var(--white)}
 <div class="svc" id="treatments">
   <div class="svc-inner">
     <div class="svc-side reveal">
-      <p class="svc-label">— 05 / Treatments</p>
+      <p class="svc-label">05 / Treatments</p>
       <h2>The HALO<br><em>glow</em> ritual.</h2>
       <p class="svc-desc">A revitalizing Kérastase deep-conditioning treatment that restores hydration, smooths the cuticle, and adds visible shine. The perfect add-on to any service.</p>
     </div>
@@ -378,7 +381,7 @@ footer{background:var(--charcoal);color:var(--white)}
 <div class="svc alt" id="special">
   <div class="svc-inner">
     <div class="svc-side reveal">
-      <p class="svc-label">— 06 / Special</p>
+      <p class="svc-label">06 / Special</p>
       <h2>Special<br><em>services.</em></h2>
       <p class="svc-desc">Finishing touches, event-day styling, and bridal packages. For weddings and eyelash extensions, a consultation is required.</p>
     </div>

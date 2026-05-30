@@ -15,6 +15,7 @@
 :root{
   --cream:#f7f2ea;--cream-2:#f0e9db;--white:#ffffff;--black:#111009;
   --charcoal:#2a2620;--mid:#6b6358;--gold:#b8962e;--gold-lt:#d4af50;
+  --brand-blue:#124B96;
   --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",-apple-system,sans-serif;
   --ease:cubic-bezier(.4,0,.2,1);--max:1200px;
 }
@@ -31,15 +32,16 @@ a{color:inherit;text-decoration:none}
 
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--cream-2)}
 .nav-inner{max-width:var(--max);margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--black)}
+.nav-logo{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--black);display:flex;align-items:center}
 .nav-logo em{font-style:italic;color:var(--gold)}
+.nav-logo img{height:38px;width:auto;display:block}
 .nav-links{display:flex;gap:40px;align-items:center}
 .nav-links a{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--mid);transition:color .25s var(--ease);position:relative;padding-bottom:2px}
-.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}
-.nav-links a:hover{color:var(--black)}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--brand-blue);transition:width .35s var(--ease)}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--brand-blue)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after,.nav-links a.active::after{width:100%}
 .nav-links a.active{color:var(--black)}
-.nav-book{font-size:11px!important;letter-spacing:.2em!important;font-weight:500;color:var(--white)!important;background:var(--black);padding:12px 24px;transition:background .3s var(--ease)!important}
+.nav-book{display:inline-flex;align-items:center;justify-content:center;line-height:1;font-size:11px!important;letter-spacing:.2em!important;font-weight:500;color:var(--white)!important;background:var(--black);padding:12px 24px;transition:background .3s var(--ease)!important}
 .nav-book::after{display:none!important}
 .nav-book:hover{background:var(--gold)!important;color:var(--white)!important}
 .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
@@ -54,7 +56,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .page-hero{background:var(--cream);padding:80px 48px 72px;text-align:center}
 .page-hero-inner{max-width:var(--max);margin:0 auto}
 .breadcrumb{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:28px}
-.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb a:hover,.breadcrumb a:focus-visible{color:var(--brand-blue)}
 .breadcrumb span{color:var(--gold)}
 .page-hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,8vw,110px);line-height:.98;letter-spacing:-.01em;margin-bottom:28px}
 .page-hero h1 em{font-style:italic}
@@ -65,6 +67,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .owners{padding:96px 48px;background:var(--white)}
 .owners-inner{max-width:var(--max);margin:0 auto}
 .owners-label{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:48px}
+.owners-label::before{content:"— ";color:var(--brand-blue)}
 .owners-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .owner-card{border:1px solid var(--cream-2);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .owner-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -16px rgba(17,16,9,.15)}
@@ -85,6 +88,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .team-head h2 em{font-style:italic}
 .team-head p{font-size:15px;color:var(--mid);line-height:1.8}
 .team-label{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.team-label::before{content:"— ";color:var(--brand-blue)}
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 24px}
 .stylist-card{cursor:default}
 .stylist-img{aspect-ratio:3/4;overflow:hidden;background:var(--cream-2);margin-bottom:16px;position:relative}
@@ -100,6 +104,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .values{background:var(--black);color:var(--white);padding:96px 48px}
 .values-inner{max-width:var(--max);margin:0 auto}
 .values-label{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-lt);font-weight:500;margin-bottom:48px}
+.values-label::before{content:"— ";color:var(--brand-blue)}
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px}
 .value-item{border-top:1px solid rgba(247,242,234,.15);padding-top:24px}
 .value-item .vnum{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--gold-lt);display:block;margin-bottom:12px}
@@ -167,7 +172,7 @@ footer{background:var(--charcoal);color:var(--white)}
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Urban <em>Halo</em></a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Urban Halo Salon"></a>
     <div class="nav-links">
       <a href="services.html">Services</a>
       <a href="team.html" class="active">Team</a>
@@ -201,7 +206,7 @@ footer{background:var(--charcoal);color:var(--white)}
 
 <section class="owners">
   <div class="owners-inner">
-    <p class="owners-label reveal">— Creative Directors</p>
+    <p class="owners-label reveal">Creative Directors</p>
     <div class="owners-grid">
       <div class="owner-card reveal">
         <div class="owner-img">
@@ -231,7 +236,7 @@ footer{background:var(--charcoal);color:var(--white)}
   <div class="team-inner">
     <div class="team-head reveal">
       <div>
-        <p class="team-label">— The Studio</p>
+        <p class="team-label">The Studio</p>
         <h2>Stylists, artists,<br>and the <em>front desk.</em></h2>
       </div>
       <p>Please specify your preferred stylist level — Creative Director, Master Stylist, or Junior Stylist — when you book. Pricing varies by level, length, and hair density.</p>
@@ -299,7 +304,7 @@ footer{background:var(--charcoal);color:var(--white)}
 
 <section class="values">
   <div class="values-inner">
-    <p class="values-label reveal">— What We Believe</p>
+    <p class="values-label reveal">What We Believe</p>
     <div class="values-grid">
       <div class="value-item reveal">
         <span class="vnum">01 / Craft</span>

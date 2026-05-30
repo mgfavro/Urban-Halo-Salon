@@ -35,6 +35,7 @@
   --mid:       #6b6358;
   --gold:      #b8962e;
   --gold-lt:   #d4af50;
+  --brand-blue: #124B96;
   --serif:     "Playfair Display", Georgia, serif;
   --sans:      "DM Sans", -apple-system, sans-serif;
   --ease:      cubic-bezier(.4,0,.2,1);
@@ -80,9 +81,11 @@ nav {
   font-size: 22px;
   letter-spacing: .04em;
   color: var(--black);
+  display: flex; align-items: center;
 }
 .nav-logo em { font-style: italic; color: var(--gold); }
-.nav-links { display: flex; gap: 40px; }
+.nav-logo img { height: 38px; width: auto; display: block; }
+.nav-links { display: flex; align-items: center; gap: 40px; }
 .nav-links a {
   font-size: 12px;
   letter-spacing: .15em;
@@ -97,16 +100,20 @@ nav {
   content: '';
   position: absolute; bottom: -2px; left: 0;
   width: 0; height: 1px;
-  background: var(--gold);
+  background: var(--brand-blue);
   transition: width .35s var(--ease);
 }
-.nav-links a:hover { color: var(--black); }
-.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--brand-blue); }
+.nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
 .nav-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 11px;
   letter-spacing: .2em;
   text-transform: uppercase;
   font-weight: 500;
+  line-height: 1;
   color: var(--white) !important;
   background: var(--black);
   padding: 12px 24px;
@@ -191,7 +198,7 @@ nav {
   padding-bottom: 2px;
   transition: color .2s;
 }
-.link-phone:hover { color: var(--gold); }
+.link-phone:hover, .link-phone:focus-visible { color: var(--brand-blue); }
 .hero-image {
   position: relative;
   overflow: hidden;
@@ -265,6 +272,7 @@ nav {
   padding: 28px 24px;
   text-align: center;
   min-width: 140px;
+  border: 1px solid var(--brand-blue);
 }
 .about-img-badge span {
   font-family: var(--serif);
@@ -291,6 +299,7 @@ nav {
   font-weight: 500;
   margin-bottom: 20px;
 }
+.section-label::before { content: "— "; color: var(--brand-blue); }
 .about-content h2 {
   font-family: var(--serif);
   font-weight: 400;
@@ -337,7 +346,7 @@ nav {
 
 /* ─── TICKER ─── */
 .ticker {
-  background: var(--black);
+  background: var(--brand-blue);
   padding: 14px 0;
   overflow: hidden;
 }
@@ -349,7 +358,7 @@ nav {
   font-family: var(--serif);
   font-style: italic;
   font-size: 22px;
-  color: rgba(247,242,234,.5);
+  color: rgba(247,242,234,.92);
 }
 .ticker-track .hi { color: var(--gold-lt); opacity: .9; }
 @keyframes tick { to { transform: translateX(-50%); } }
@@ -499,7 +508,7 @@ nav {
   padding-bottom: 10px; border-bottom: 1px solid var(--cream-2);
 }
 .info-block p, .info-block a { font-size: 15px; color: var(--charcoal); line-height: 1.7; }
-.info-block a:hover { color: var(--gold); }
+.info-block a:hover, .info-block a:focus-visible { color: var(--brand-blue); }
 .hour-line { display: flex; justify-content: space-between; font-size: 14px; padding: 5px 0; }
 .hour-line span:first-child { color: var(--mid); }
 .policy-note {
@@ -662,7 +671,7 @@ footer {
 <!-- Nav -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">Urban <em>Halo</em></a>
+    <a href="/" class="nav-logo"><img src="assets/logo.png" alt="Urban Halo Salon"></a>
     <div class="nav-links">
       <a href="services.html">Services</a>
       <a href="team.html">Team</a>
@@ -742,7 +751,7 @@ footer {
         </div>
       </div>
       <div class="about-content">
-        <p class="section-label reveal">— About Urban Halo</p>
+        <p class="section-label reveal">About Urban Halo</p>
         <h2 class="reveal">High-end experience.<br><em>Exceptional</em> results.</h2>
         <p class="lead reveal">What makes us different from other Arlington hair salons? Knowledge and artistry.</p>
         <p class="reveal">Our stylists have trained under world-renowned educators, mastering the latest fashion-forward techniques. Between advanced elite training and educational seminars, we stay at the leading edge of what's possible.</p>
@@ -764,7 +773,7 @@ footer {
   <div class="section section-narrow">
     <div class="services-head">
       <div>
-        <p class="section-label">— Services</p>
+        <p class="section-label">Services</p>
         <h2>Everything<br>your hair <em>needs.</em></h2>
       </div>
       <p>From a quick blow-out to a full balayage transformation — our menu is built around your goals. Pricing varies by stylist level, hair length, and density.</p>
@@ -843,7 +852,7 @@ footer {
   <div class="section section-narrow">
     <div class="balayage-grid">
       <div class="balayage-content">
-        <p class="section-label reveal">— Our Specialty</p>
+        <p class="section-label reveal">Our Specialty</p>
         <h2 class="reveal">The art of<br><em>balayage.</em></h2>
         <p class="lead reveal">&ldquo;Balayage&rdquo; — French for &ldquo;to sweep.&rdquo;</p>
         <p class="reveal">Many clients come in looking to change their look without the harsh commitment of a one-process color or traditional highlight. Balayage is one of the most versatile highlighting techniques — and it's a look we happen to specialize in creating.</p>
@@ -920,7 +929,7 @@ footer {
   <div class="section section-narrow">
     <div class="visit-grid">
       <div class="visit-content">
-        <p class="section-label reveal">— Find Us</p>
+        <p class="section-label reveal">Find Us</p>
         <h2 class="reveal">In the heart of <em>Clarendon.</em></h2>
         <p class="reveal">Tucked along Clarendon Boulevard, steps from the Metro and minutes from Ballston, Courthouse, and Rosslyn.</p>
 
